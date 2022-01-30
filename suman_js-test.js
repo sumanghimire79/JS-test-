@@ -44,8 +44,6 @@ buttonElement.addEventListener('click', () => {
 // question : 3
 
 const fetchApi = fetch('https://reqres.in/api/users')
-fetchApi.then(data => {
-    const jsonData = data.json()
-
-    console.log(jsonData);
+fetchApi.then(data => data.json()).then(data => {
+    console.log(data)
 })
